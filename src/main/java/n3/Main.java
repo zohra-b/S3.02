@@ -11,5 +11,8 @@ public class Main {
         shoeStore.sale(paypal, "flipflop", 12);
         shoeStore.sale(bankDebit, "slippers", 25);
 
+        shoeStore.sale(price ->
+                            {System.out.println("you've paid " + price + "€ by LAMBDA ");}, "otro producto", 1);
+
     }
 }
