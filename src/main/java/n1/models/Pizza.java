@@ -1,4 +1,4 @@
-package n1;
+package n1.models;
 
 public class Pizza {
     private int size;

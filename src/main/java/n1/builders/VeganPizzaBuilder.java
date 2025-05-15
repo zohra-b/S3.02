@@ -1,6 +1,9 @@
-package n1;
+package n1.builders;
 
-public class VeganPizzaBuilder implements PizzaBuilder{
+import n1.models.Pizza;
+import n1.interfaces.PizzaBuilder;
+
+public class VeganPizzaBuilder implements PizzaBuilder {
     private int size;
     private String dough;
     private String toppings;

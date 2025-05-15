@@ -1,4 +1,6 @@
-package n3;
+package n3.caller;
+
+import n3.interfaces.CallBackPaymentMethod;
 
 public class ShoeStore {
 

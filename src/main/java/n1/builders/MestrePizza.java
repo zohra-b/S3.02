@@ -1,4 +1,7 @@
-package n1;
+package n1.builders;
+
+import n1.interfaces.PizzaBuilder;
+import n1.models.Pizza;
 
 public class MestrePizza {
     private int size;

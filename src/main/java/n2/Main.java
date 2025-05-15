@@ -1,21 +1,23 @@
 package n2;
 
-import java.util.ArrayList;
-import java.util.List;
+import n2.observer.StockAgent;
+import n2.subject.Subject;
 
 public class Main {
     public static void main(String[] args){
-      SubjectStockAgent stockAgents = new SubjectStockAgent();
-        User user1 = new User("Rocio");
-        User user2 = new User("Marta");
-        User user3 = new User("Montse");
+      Subject stockAgents = new Subject();
+        StockAgent user1 = new StockAgent("Rocio");
+        StockAgent user2 = new StockAgent("Marta");
+        StockAgent user3 = new StockAgent("Montse");
 
 
-        stockAgents.addObserver(user1);
-        stockAgents.addObserver(user2);
-        stockAgents.addObserver(user3);
-
+        stockAgents.subscribe(user1);
+        stockAgents.subscribe(user2);
+        stockAgents.subscribe(user3);
         stockAgents.stockFall();
+
+        System.out.println("\n");
+        stockAgents.unsubscribe(user1);
         stockAgents.stockRise();
 
     }

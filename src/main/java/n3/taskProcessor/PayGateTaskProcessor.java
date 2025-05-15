@@ -1,4 +1,6 @@
-package n3;
+package n3.taskProcessor;
+
+import n3.interfaces.CallBackPaymentMethod;
 
 public class PayGateTaskProcessor {
 

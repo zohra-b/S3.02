@@ -1,5 +1,10 @@
 package n1;
 
+import n1.builders.HawaianPizzaBuilder;
+import n1.builders.MestrePizza;
+import n1.builders.VeganPizzaBuilder;
+import n1.models.Pizza;
+
 public class Main {
     public static void main(String[] args) {
         VeganPizzaBuilder veganPizzaBuilder = new VeganPizzaBuilder();
@@ -32,7 +37,7 @@ public class Main {
 
 
         try {
-            Pizza freeStyle = mestreBuilder.builder(hawaianPizzaBuilder, 24, "standard", "pineappel + ham");
+            Pizza freeStyle = mestreBuilder.builder(hawaianPizzaBuilder, 24, "standard", "pineapple + ham");
             System.out.println("Pizza with Director :" + freeStyle);
         } catch (IllegalArgumentException e) {
             System.out.println(e.getMessage());
@@ -40,7 +45,7 @@ public class Main {
 
 
 
-        ;
+
     }
 
 

@@ -1,4 +1,6 @@
-package n1;
+package n1.interfaces;
+
+import n1.models.Pizza;
 
 public interface PizzaBuilder {
     PizzaBuilder setSize(int size);

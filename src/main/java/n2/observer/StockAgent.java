@@ -1,9 +1,11 @@
-package n2;
+package n2.observer;
 
-public class User implements Observer{
+import n2.interfaces.Observer;
+
+public class StockAgent implements Observer {
     private String name;
 
-    public User(String name){
+    public StockAgent(String name){
         this.name = name;
     }
 

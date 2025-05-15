@@ -1,21 +1,24 @@
-package n2;
+package n2.subject;
+
+import n2.interfaces.Observable;
+import n2.interfaces.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SubjectStockAgent {
+public class Subject implements Observable {
     private List<Observer> observers = new ArrayList<>();
 
 
-    public void addObserver(Observer o){
+    public void subscribe(Observer o){
         observers.add(o);
     }
 
-    public void removeObserver(Observer o){
+    public void unsubscribe(Observer o){
         observers.remove(o);
     }
 
-    private void notifyObserver(String message){
+    public void notifyObserver(String message){
         for(Observer observer : observers){
             observer.update(message);
         }
