@@ -15,24 +15,12 @@ public class Pizza {
         return size;
     }
 
-    public void setSize(int size) {
-        this.size = size;
-    }
-
     public String getDough() {
         return dough;
     }
 
-    public void setDough(String dough) {
-        this.dough = dough;
-    }
-
     public String getToppings() {
         return toppings;
-    }
-
-    public void setToppings(String toppings) {
-        this.toppings = toppings;
     }
 
     @Override

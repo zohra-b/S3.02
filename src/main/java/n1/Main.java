@@ -13,35 +13,41 @@ public class Main {
 
 
         try {
-            Pizza veggie = veganPizzaBuilder
-                    .setSize(20)
-                    .setDough("crispy")
-                    .setToppings("cream, spinach").buildPizza();
-            System.out.println("Pizza with Vegan Builder :" + veggie);
-
+            Pizza customHawaianPizza = mestreBuilder.buildCustomPizza(hawaianPizzaBuilder, 24, "standard", "pineapple + ham");
+            System.out.println("custom Hawaian Pizza :" + customHawaianPizza);
         } catch (IllegalArgumentException e) {
-            System.out.println("Veggie pizza : " + e.getMessage());
-
+            System.out.println("custom Hawaian Pizza :" + e.getMessage());
         }
 
         try {
-            Pizza spicy = hawaianPizzaBuilder
-                    .setSize(25)
-                    .setDough("gluten free")
-                    .setToppings("pepper, kimchi")
-                    .buildPizza();
-            System.out.println("Pizza with Hawaian Builder :" + spicy);
+            Pizza customVeganPizza = mestreBuilder.buildCustomPizza(veganPizzaBuilder, 24, "standard", "tomato + ham");
+            System.out.println("custom Vegan Pizza :" + customVeganPizza);
         } catch (IllegalArgumentException e) {
-            System.out.println("Spicy Pizza : " + e.getMessage());
+            System.out.println("custom Vegan Pizza :" + e.getMessage());
         }
-
 
         try {
-            Pizza freeStyle = mestreBuilder.builder(hawaianPizzaBuilder, 24, "standard", "pineapple + ham");
-            System.out.println("Pizza with Director :" + freeStyle);
+            Pizza classicHawaianPizza = mestreBuilder.buildClassicPizza(hawaianPizzaBuilder, "pineapple" );
+            System.out.println("classic Hawaian Pizza :" + classicHawaianPizza);
         } catch (IllegalArgumentException e) {
-            System.out.println(e.getMessage());
+            System.out.println("classic Hawaian Pizza :" + e.getMessage());
         }
+
+        try {
+            Pizza classicVeganPizza = mestreBuilder.buildClassicPizza(veganPizzaBuilder, "mushrooms + artichoke + eggplant");
+            System.out.println("classic Vegan Pizza :" + classicVeganPizza);
+        } catch (IllegalArgumentException e) {
+            System.out.println("classic Vegan Pizza :" + e.getMessage());
+        }
+
+        try {
+            Pizza cheesyCrustHawaianPizza = mestreBuilder.buildCheesyCrust(hawaianPizzaBuilder, "pineapple + ham + mushrooms + zucchini + eggplant");
+            System.out.println("cheesyCrust Hawaian Pizza :" + cheesyCrustHawaianPizza);
+        } catch (IllegalArgumentException e) {
+            System.out.println("cheesyCrust Hawaian Pizza : " + e.getMessage());
+        }
+
+
 
 
 

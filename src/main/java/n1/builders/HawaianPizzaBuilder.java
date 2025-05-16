@@ -6,7 +6,7 @@ import n1.interfaces.PizzaBuilder;
 public class HawaianPizzaBuilder implements PizzaBuilder {
     private int size;
     private String dough;
-    private String toppings;
+    private String toppings = "";
 
     public PizzaBuilder setDough(String dough) {
         this.dough = dough;
